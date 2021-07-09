@@ -1,0 +1,353 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #eee;
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+      .code {
+        margin-top: 10px;
+        background-color: #eee;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #d6d6d6;
+      }
+
+      .output {
+        margin-top: 10px;
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 10px;
+        border: 5px solid green;
+        border-style: none none none solid;
+      }
+
+      .card-section {
+        margin-bottom: 50px;
+      }
+
+      .card-title {
+        color: blue;
+      }
+    </style>
+    <title>PHP Documentation</title>
+  </head>
+
+  <body>
+    <br />
+    <div class="container">
+      <h1>PHP Documentation</h1>
+      <ul>
+        <li>
+          <a href="#">Basics of PHP</a>
+          <ul>
+            <li>
+              <a href="#echo">echo</a>
+            </li>
+            <li>
+              <a href="#variables">Variables</a>
+            </li>
+            <li>
+              <a href="#strings">Strings</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <hr />
+      <!-- Echo -->
+      <div class="card card-section" id="echo">
+        <div class="card-body">
+          <h5 class="card-title">echo</h5>
+          <hr />
+          <section>
+            <h6 class="card-subtitle">Lession 1</h6>
+            <p class="card-text">
+              Like console.log() in JavaScript, printf() in C and cout&lt;&lt;
+              in C++echo is used in PHP to output something to the page
+            </p>
+            <h6 class="card-subtitle">Sample echo code:</h6>
+            <div class="code">
+              <code>
+                echo "Hi";
+                <br />
+                echo "Hello";
+              </code>
+            </div>
+            <br />
+            <h6 class="card-subtitle">Output page:</h6>
+            <div class="output">HiHello</div>
+          </section>
+
+          <br />
+
+          <section>
+            <h6 class="card-subtitle">Lession 2</h6>
+            <p class="card-text">
+              PHP code is executed on the server and only the output is sent to
+              the client browser.You can echo a <b>&lt;br&gt;</b> tag to make a
+              line break in your output page like below:
+            </p>
+            <h6 class="card-subtitle">Sample echo code:</h6>
+            <div class="code">
+              <code>
+                echo "Hi";
+                <br />
+                echo "&lt;br&gt;";
+                <br />
+                echo "Hello";
+              </code>
+            </div>
+            <br />
+            <h6 class="card-subtitle">Output page:</h6>
+            <div class="output">
+              Hi
+              <br />
+              Hello
+            </div>
+            <br />
+            <p class="card-text">
+              You can also do the same in a single echo like below:
+            </p>
+            <h6 class="card-subtitle">Sample echo code:</h6>
+            <div class="code">
+              <code> echo "Hi&lt;br&gt;Hello"; </code>
+            </div>
+            <br />
+            <h6 class="card-subtitle">Output page:</h6>
+            <div class="output">
+              Hi
+              <br />
+              Hello
+            </div>
+          </section>
+
+          <br />
+
+          <section>
+            <h6 class="card-subtitle">Lession 3</h6>
+            <p class="card-text">
+              You can perform any operations on the echo statement and the
+              output will be printed to the page. Note: The operations written
+              inside <b>&lt;?php</b> and <b>?&gt;</b> will be executed on the
+              sever and hence it will not be visible on the final output code
+              the browser receives
+            </p>
+            <h6 class="card-subtitle">Sample echo code:</h6>
+            <div class="code">
+              <code>
+                echo 1+2+3+4+4+5+6+7+8+9; // Mathematical operations
+                <br />
+                echo "&lt;br&gt;";
+                <br />
+                echo "Hi" . " Hello";
+                <br />
+                // Concatenation is done with . instead of + in other languages
+              </code>
+            </div>
+            <br />
+            <h6 class="card-subtitle">Output page:</h6>
+            <div class="output">
+              49
+              <br />
+              Hi Hello
+            </div>
+            <br />
+            <p class="card-text">
+              Note: Unlike prompt() in JavaScript, scanf() in C and cin>> in C++
+              you don't have any function in PHP that could accept user input
+              because PHP code is executed on the server when a page is loading.
+              User inputs are received in PHP server side code through the
+              <b>&lt;form&gt;&lt;/form&gt;</b> tags and their
+              <b>&lt;input&gt;</b> tags in html code. When an HTML form is
+              filled and submited by the user we usually simply redirect to
+              another file mentioned in the "action" attribe of form tag. Here
+              while redirecting to the action page, the form data is also sent
+              to the server. You'll see how to read those data from PHP code
+              later on.
+            </p>
+          </section>
+        </div>
+      </div>
+      <!-- Variables -->
+      <div class="card card-section" id="variables">
+        <div class="card-body">
+          <h5 class="card-title">Variables</h5>
+          <hr />
+          <section>
+            <h6 class="card-subtitle">Lession 1: Types of variables</h6>
+            <p class="card-text">
+              Variables in PHP is much simpler than variables in any other
+              programming languages.
+              <br />
+              In C programming language you write variables like below: <br />
+            </p>
+            <div class="code">
+              <code>
+                int minAge = 20;<br />
+                float PI = 3.14159;<br />
+                string name = "Jishnu Raj";<br />
+                ...... <br />
+              </code>
+            </div>
+            <p class="card-text">
+              In JavaScript you write variables like below: <br />
+            </p>
+            <div class="code">
+              <code>
+                var minAge = 20;<br />
+                var PI = 3.14159;<br />
+                var name = "Jishnu Raj";<br />
+              </code>
+            </div>
+
+            <p class="card-text">
+              Where as in PHP defining variables is much simpler. Take a look at
+              this code:
+            </p>
+            <h6 class="card-subtitle">Sample echo code:</h6>
+            <div class="code">
+              <code>
+                $minAge = 18; // Integer
+                <br />
+                $PI = 3.14157; // Float
+                <br />
+                $user_name = "Jishnu Raj"; // String
+                <br />
+                $isLoggedIn = true; // Boolean
+                <br />
+                echo $user_name;
+                <br />
+              </code>
+            </div>
+            <br />
+            <h6 class="card-subtitle">Output page:</h6>
+            <div class="output">Jishnu Raj</div>
+          </section>
+        </div>
+      </div>
+      <!-- Strings -->
+      <div class="card card-section" id="strings">
+        <div class="card-body">
+          <h5 class="card-title">Strings</h5>
+          <hr />
+          <section>
+            <h6 class="card-subtitle">Lession 1: String functions</h6>
+            <p class="card-text">
+              String is just one of the datatypes in PHP like integer, float,
+              boolean etc. but there are a lot of functions available for
+              performing numerous operations on strings. Some of them are:
+            </p>
+            <ul>
+              <li>String concatenation</li>
+              <li>String length</li>
+              <li>Trim</li>
+              <li>Sub string</li>
+            </ul>
+            <h6>String concatenation</h6>
+            <p>
+              Multiple strings are concatenated (joined) together using the
+              <b>.</b> operator. Sample code: <br />
+            </p>
+            <div class="code">
+              <code>
+                $first_name = "Jishnu"; <br />
+                $last_name = "Raj"; <br />
+                $full_name = $first_name . " " . $last_name; <br />
+                echo $full_name;
+              </code>
+            </div>
+            <br />
+            <h6>String length</h6>
+            <p class="card-text">
+              To find the number of characters in a string you can use strlen()
+              function. Sample code: <br />
+            </p>
+            <div class="code">
+              <code>
+                $name = "PHP";
+                <br />
+                $name_length = strlen($name);
+                <br />
+                echo "Number of characters in name variable is: ".$name_length;
+                <br />
+                echo "&lt;br&gt;";
+                <br />
+                echo "Number of characters in the word 'elephant' is " .
+                strlen("elephant");
+              </code>
+            </div>
+
+            <br>
+            <h6 class="card-subtitle">Trim:</h6>
+            <p class="card-text">
+              trim() function is used to remove whitespace or other characters from both sides of a string. Sample code: 
+            </p>
+            <div class="code">
+              <code>
+                $name = " Jishnu Raj ";
+                <br>
+                echo $name;
+                <br>
+                echo "&lt;br&gt;";
+                <br>
+                echo trim($name);
+                <br>
+              </code>
+            </div>
+            <br />
+            <h6 class="card-subtitle">Output page:</h6>
+            <div class="output">
+                 Jishnu Raj 
+                <br>
+                Jishnu Raj
+            </div>
+
+            <br>
+            <h6 class="card-subtitle">Sub string:</h6>
+            <p class="card-text">
+              substr() function returns a part of a string.
+              <br>
+              syntax: substr(string,start,length)
+            </p>
+            <div class="code">
+              <code>
+                $name = "Jishnu Raj";
+                <br>
+                echo substr($name, 7);
+                <br>
+                echo "&lt;br&gt;";
+                <br>
+                echo substr($name, 0, 7);
+                <br>
+                echo "&lt;br&gt;";
+                <br>
+                echo substr($name, 7, 2);
+              </code>
+            </div>
+            <br />
+            <h6 class="card-subtitle">Output page:</h6>
+            <div class="output">
+                 Raj 
+                <br>
+                Jishnu
+                <br>
+                Ra
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <br />
+  </body>
+</html>
